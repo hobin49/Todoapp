@@ -201,10 +201,10 @@ export default {
 </script>
 ```
 
-- 오늘 할일 띄우기(Task.vue -> App.vue)
+- 오늘 할일 띄우기(Task.vue -> Tasks.vue -> App.vue)
 
 ```vue
-<!--Task.vue-->
+<!--Tasks.vue-->
 <template>
   <div :key="task.id" v-for="task in tasks">
     <TaskMain :task='task' />
