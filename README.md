@@ -191,12 +191,14 @@ npm run lint
 	<ButtonS text="Add Task", color="green"/>
 </template>
 
+<script>
 import ButtonS from './Button'
 export default {
 	components: {
 		ButtonS
 	}
 }
+</script>
 ```
 
 - 오늘 할일 띄우기(Task.vue -> App.vue)
