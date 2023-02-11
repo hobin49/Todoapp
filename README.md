@@ -381,7 +381,7 @@ methods: {
 <!-- Task.vue-->
 <!-- dblclick을 하면 더블클릭시 이벤트가 발생하는 것이다 emit을 안에 다 만들면 methods에 만들지 않아도 된다 -->
 <template>
-  div @dblclick="$emit('toggle-reminder', task.id)" :class="[task.reminder ? 'reminder': '',  'task']">
+  <div @dblclick="$emit('toggle-reminder', task.id)" :class="[task.reminder ? 'reminder': '',  'task']">
     <h3>
       {{ task.text }}
       <i @click="$emit('delete-task', task.id)" class='fas fa-times'></i>
