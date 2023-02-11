@@ -521,25 +521,17 @@ methods: {
 ```vue
 <!--Button.vue-->
 <template>
-  <button @click="onClick()" :style="{background: color}" class='btn'>{{text}}</button>
+  <button @click="$emit('btn-click')" :style="{background: color}" class='btn'>{{text}}</button>
 </template>
-
-<script>
-export default {
-  methods: {
-    onClick() {
-      //상위 컴포넌트로 보낼 메서드 이름
-      this.$emit('btn-click')
-</script>
       
 <!--Header.vue-->
 <template>
   <header>
     <h1>{{ title }}</h1>
-    //하위 컴포넌트에서 받아온 btn-click메서드 사용하고
-    // App.vue에 또 toggle-add-task라는 메서드를 보낸다
-    // text바인딩해서 만약에 showAddTask(False)이면 close 아니면 Add로 텍스트를 바꾼다.
-    <ButtonS @btn-click="$emit('toggle-add-task')" :text="showAddTask ? 'Close' : 'Add Task'" :color="showAddTask ? 'red' : 'green'"/>
+    <!--하위 컴포넌트에서 받아온 btn-click메서드 사용하고-->
+    <!-- App.vue에 또 toggle-add-task라는 메서드를 보낸다 -->
+    <!-- text바인딩해서 만약에 showAddTask(False)이면 close 아니면 Add로 텍스트를 바꾼다.-->
+    <ButtonS @btn-click="$emit('toggle-add-task')" :text="showAddTask ? '닫기' : '추가하기'" :color="showAddTask ? 'red' : 'green'"/>
   </header>
 </template>
 
