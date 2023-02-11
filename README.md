@@ -227,6 +227,7 @@ export default {
 ```
 
 ```vue
+<!--App.vue-->
 <template>
 <div class="container">
   <HeaderV title='Task Tracker'/>
