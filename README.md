@@ -165,7 +165,7 @@ npm run lint
 <!--Button.vue-->
 <template>
 	<!--Header.vue에 상위 컴포넌트인 App.vue에서 가져온 클래스-->
-	<!--스타일 바인딩 해주고 onclick 이벤트 실행
+	<!--스타일 바인딩 해주고 onclick 이벤트 실행-->
 	<button @click="onClick()" :style="{background: color}" class="btn">Add Task</button>
 </template>
 <script>
